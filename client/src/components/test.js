@@ -9,17 +9,15 @@ class Test extends Component {
             name: "Bob Saget"
         }
 
-        const resp = await axios.post('/api/send-message', message);
+        const postresp = await axios.post('/api/send-message', message);
 
-        console.log('Send message Response:',resp); 
+        console.log('Send message Response:',postresp); 
 
+        const resp = await axios.get('/api/test');
+        console.log('Test Response', resp); 
 
-
-        // const resp = await axios.get('/api/test');
-        // console.log('Test Response', resp); 
-
-        // const user = await axios.get('/api/user');
-        // console.log('User Response:' , user)
+        const user = await axios.get('/api/user');
+        console.log('User Response:' , user)
     }
     render(){
         return(
