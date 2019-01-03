@@ -10,7 +10,6 @@ class Test extends Component {
         }
 
         const postresp = await axios.post('/api/send-message', message);
-
         console.log('Send message Response:',postresp); 
 
         const resp = await axios.get('/api/test');
@@ -22,7 +21,7 @@ class Test extends Component {
     render(){
         return(
             <div>
-                <h1>Test Components</h1>
+                <h1>Something Else Said Here</h1>
             </div>
         ); 
     }
